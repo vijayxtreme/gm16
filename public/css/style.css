@@ -52,8 +52,7 @@ body {
   font-family: Lato, sans-serif;
   color: white;
   font-weight: 300;
-  background-color: #004374;
-  min-height: 733px; }
+  background-color: #004374; }
 
 .main {
   max-width: 736px;
@@ -91,7 +90,7 @@ header {
 section {
   width: 100%;
   display: none;
-  min-height: 514px;
+  min-height: 554px;
   box-sizing: border-box;
   padding-bottom: 91px; }
   section .mobile-friendly {
@@ -467,7 +466,7 @@ footer {
   padding-bottom: 33px;
   text-align: center; }
   footer ul {
-    padding-top: 29px; }
+    padding-top: 9px; }
     footer ul li {
       display: inline-block; }
     footer ul .line {
