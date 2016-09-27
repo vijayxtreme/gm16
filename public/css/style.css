@@ -62,7 +62,7 @@ body {
 
 .main-container {
   padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 10px;
   background-color: #004374; }
 
 .step-container {
@@ -97,7 +97,7 @@ section {
   section .mobile-friendly {
     padding-top: 14px;
     padding-bottom: 16px;
-    font-weight: 100;
+    font-weight: 300;
     opacity: 1;
     font-size: 14px; }
   section .marketing {
@@ -110,7 +110,7 @@ section {
     section .calculator p {
       padding-top: 5px;
       opacity: 0.95;
-      font-weight: 200;
+      font-weight: 300;
       font-style: italic;
       font-size: 18px;
       line-height: 20px; }
