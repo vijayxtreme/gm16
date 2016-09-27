@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="8px" height="16px" viewBox="0 0 8 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-right</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.300000012">
+        <g id="Got-Movers-PPC---Menu---Mobile" transform="translate(-368.000000, -956.000000)" fill="#FFFFFF">
+            <path d="M372.206292,967.584389 L379.494079,961.50927 C379.79608,961.257936 379.836969,960.80838 379.584746,960.506602 C379.332079,960.204157 378.884301,960.163268 378.582078,960.415046 L371.750069,966.110387 L364.918504,960.415046 C364.615615,960.163712 364.167614,960.204601 363.915391,960.506602 C363.663169,960.808158 363.704058,961.257936 364.006058,961.50927 L371.293401,967.584389 C371.425846,967.695056 371.588069,967.750167 371.750069,967.750167 C371.912291,967.750167 372.074291,967.695056 372.206292,967.584389 L372.206292,967.584389" id="arrow-right" transform="translate(371.750069, 964.000099) rotate(-90.000000) translate(-371.750069, -964.000099) "></path>
+        </g>
+    </g>
+</svg>

@@ -107,7 +107,7 @@ section {
       font-weight: 200;
       font-style: italic;
       font-size: 18px;
-      line-height: 24px; }
+      line-height: 20px; }
   section .forms {
     max-width: 280px;
     width: 100%;
@@ -189,6 +189,7 @@ section {
   section #phone {
     display: block; }
   section #disclaimer {
+    display: none;
     font-family: Lato, sans-serif;
     font-style: italic;
     font-weight: 200;
@@ -218,6 +219,8 @@ section {
       margin-left: 10px;
       margin-right: 10px;
       transform: skewX(-20deg); }
+  section .summary.summary_white li {
+    opacity: 1; }
   section .next-steps {
     text-align: center;
     font-size: 20px;
@@ -225,9 +228,100 @@ section {
     line-height: 24px; }
   section .next-steps h4.clear {
     opacity: 0.49; }
+  section .thank-you-heading {
+    font-family: Lato, sans-serif;
+    text-align: center;
+    padding-top: 78px;
+    padding-bottom: 50px; }
+    section .thank-you-heading h2 {
+      font-weight: 400;
+      line-height: 34px;
+      font-size: 28px;
+      color: white;
+      padding-bottom: 11px; }
+    section .thank-you-heading p {
+      font-size: 20px;
+      font-weight: 100;
+      line-height: 24px; }
+  section .thank-you-quote {
+    height: 111px;
+    width: 100%;
+    max-width: 374px;
+    margin: 0 auto;
+    background-color: #0A4572;
+    color: white;
+    border-radius: 4px;
+    padding-top: 29px;
+    box-sizing: border-box;
+    margin-bottom: 45px; }
+    section .thank-you-quote h5 {
+      font-family: Lato, sans-serif;
+      font-size: 42px;
+      text-align: center; }
+  section .thank-you-finish {
+    text-align: center;
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 18px; }
+    section .thank-you-finish a {
+      color: white;
+      font-weight: 600;
+      line-height: 24px;
+      font-style: normal; }
+  section .loader_area {
+    padding-top: 192px;
+    text-align: center;
+    font-family: Lato, sans-serif;
+    font-style: italic;
+    font-size: 22px;
+    margin: 0 auto;
+    max-width: 347px;
+    line-height: 27px; }
+    section .loader_area h3 {
+      padding-bottom: 30px; }
+    section .loader_area p {
+      padding-top: 28px; }
+
+section#thank-you {
+  background-image: none;
+  background-color: #2183CA;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: none; }
 
 section#step1 {
   display: block; }
+
+.bar-holder {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #D2D2D2;
+  transform: translate(0%, -50%);
+  height: 20px;
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.45);
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.45); }
+
+.bar {
+  position: relative;
+  top: 2px;
+  height: 17px;
+  left: 1px;
+  width: 8%;
+  margin-top: -10px;
+  /* half the height */
+  /* half the width */
+  border-radius: 20px;
+  background-image: -webkit-linear-gradient(-45deg, #ff9a1a 25%, #ff9a1a 25%, rgba(255, 154, 26, 0) 50%, rgba(255, 154, 26, 0) 50%, #ff9a1a 75%, #ff9a1a 75%);
+  background-image: -moz-linear-gradient(-45deg, #ff9a1a 25%, #ff9a1a 25%, #ff9a1a 50%, #ff9a1a 50%, #ff9a1a 75%, #ff9a1a 75%);
+  background-image: -o-linear-gradient(-45deg, #ff9a1a 25%, #ff9a1a 25%, #ff9a1a 50%, #ff9a1a 50%, #ff9a1a 75%, #ff9a1a 75%);
+  background-image: linear-gradient(-45deg, #ff9a1a 25%, #ff9a1a 25%, #ff9a1a 50%, #ff9a1a 50%, #ff9a1a 75%, #ff9a1a 75%);
+  background-color: #d3d3d3;
+  background-size: 50px 50px;
+  -webkit-box-shadow: inset 2px -1px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 2px -1px 4px rgba(0, 0, 0, 0.5); }
 
 @media screen and (max-width: 390px) {
   .girl-cell {
@@ -253,8 +347,104 @@ nav.overlay {
   background-color: rgba(18, 71, 112, 0.95);
   height: 100%;
   width: 100%;
-  position: absolute;
-  top: 0; }
+  position: fixed;
+  top: 0;
+  padding-top: 98px;
+  text-align: center;
+  font-family: Lato;
+  font-weight: 300;
+  font-size: 22px;
+  padding-left: 36px;
+  padding-right: 36px;
+  box-sizing: border-box; }
+  nav.overlay .overlay_step {
+    display: none; }
+  nav.overlay .overlay_step.move_size {
+    display: block; }
+  nav.overlay .menu_move_size {
+    padding-top: 34px; }
+  nav.overlay button {
+    background-color: #2697E9;
+    display: block;
+    max-width: 342.96px;
+    width: 100%;
+    height: 58.62px;
+    margin: 0 auto;
+    border: 0;
+    margin-bottom: 6px;
+    border-radius: 4px;
+    font-family: Lato, sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 1.83px;
+    color: white;
+    text-transform: uppercase;
+    outline: none; }
+  nav.overlay button:active {
+    background-color: #49B844; }
+
+aside#info {
+  display: none;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  min-height: 733px;
+  height: 100%;
+  background-color: #2183CA;
+  z-index: 10; }
+  aside#info button {
+    position: absolute;
+    top: 222px; }
+  aside#info button#info-left {
+    left: 42px; }
+  aside#info button#info-right {
+    right: 42px; }
+  aside#info .close {
+    position: absolute;
+    right: 20px;
+    top: 20px; }
+  aside#info .info {
+    padding-top: 66px;
+    padding-right: 40px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    text-align: center; }
+  aside#info .info_main_step h5 {
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    line-height: 19px;
+    font-family: Montserrat, sans-serif;
+    padding-bottom: 15px; }
+  aside#info .info_main_step p {
+    font-size: 18px;
+    line-height: 24px;
+    opacity: 0.7;
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+    max-width: 239px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 41px; }
+  aside#info .info_disclaimer {
+    border-top: 1px solid rgba(255, 255, 255, 0.28);
+    padding-top: 48px;
+    font-family: Lato, sans-serif;
+    opacity: 0.5;
+    color: #AAC6D9;
+    font-size: 10px;
+    line-height: 15px; }
+  aside#info .info_copyright {
+    padding-top: 35px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    font-family: Lato, sans-serif; }
+
+@media screen and (max-width: 360px) {
+  aside#info button#info-left {
+    left: 10px; }
+  aside#info button#info-right {
+    right: 10px; } }
 
 footer {
   padding-bottom: 33px;

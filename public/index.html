@@ -48,10 +48,12 @@
 			</div>
 		</section>
 		<section id="step2">
-			<div>
+			<div class="summary">
 				<ul>
 					<li>90401</li>
+					<li class="line-s"></li>
 					<li>Studio</li>
+					<li class="line-s"></li>
 					<li>Sept 30</li>
 				</ul>
 			</div>
@@ -59,19 +61,19 @@
 				<h2>Where are you moving?</h2>
 				<div>
 					<form>
-						<input type="text" name="to_zip"><button class="ziphelp" type="button">ZIP Help</button>
+						<input type="text" name="to_zip" placeholder="To ZIP"><button class="ziphelp" type="button">ZIP Help</button>
 						<button class="cta" type="submit" id="calculate">CALCULATE</button>
 					</form>
 				</div>
 			</div>
 		</section>
 		<section id="step3">
-			<div>
-				<h3>Searching for Movers...</h3>
-				<div>
-					Loading
+			<div class="loader_area">
+				<h3 id="loader-heading">Calculating...</h3>
+				<div class="bar-holder">
+					<div class="bar"></div>
 				</div>
-				<p>40%</p>
+				<p><span id="loader-text">0</span>%</p>
 			</div>
 		</section>
 		<section id="step4">
@@ -124,39 +126,107 @@
 				<p>By clicking on the "View Quote" button, I agree to the Terms of Use, Privacy Policy and Disclaimer.  My "click" provides express written consent to be contacted directly by companies to quote my move or offer other products or services via emails, text messages, or calls/prerecorded messages via automatic dialing systems even if I am on a DNC list.  Consent is not a condition of purchasing any product or service.</p>
 			</div>
 		</section>
-		<section id="thank-you">
-			<div>
-				<h2>Thank You!</h2>
-				<p>Professional movers will call you shortly.</p>
-				<p>In the meantime, please see below for your approximate estimate:</p>
-			</div>
-			<div>
-				<h5>$1,000 - $2,000</h5>
-			</div>
-			<div>
-				<p>Get Moving with iMover <a href="#">CLICK HERE</a></p>
-			</div>
-		</section>
 	</div>
+	<section id="thank-you">
+		<div class="thank-you-heading">
+			<h2>Thank You!</h2>
+			<p>Professional movers will call you shortly.</p>
+			<p>In the meantime, please see below for your approximate estimate:</p>
+		</div>
+		<div class="thank-you-quote">
+			<h5>$1,000 - $2,000</h5>
+		</div>
+		<div class="thank-you-finish">
+			<p>Get Moving with iMover <a href="#">CLICK HERE</a></p>
+		</div>
+	</section>
 	<nav class="overlay">
-		<div>
-			<h3>What size is your move?</h3>
-			<div>
-				<button>Studio</button>
-				<button>1 Bedroom</button>
-				<button>2 Bedroom</button>
-				<button>3 Bedroom</button>
-				<button>4+ Bedroom</button>
-				<button>Office/Commercial</button>
+		<div class="overlay_step move_size">
+			<h3>Select Your Move Size</h3>
+			<div class="menu_move_size">
+				<button type="button">Studio</button>
+				<button type="button">1 Bedroom</button>
+				<button type="button">2 Bedroom</button>
+				<button type="button">3 Bedroom</button>
+				<button type="button">4+ Bedroom</button>
+				<button type="button">Office/Commercial</button>
 			</div>
 		</div>
-		<div>
+		<div class="overlay_step datepicker">
 			<h3>When are you moving?</h3>
-			<div>
+			<div class="menu_datepicker">
 				Datepicker
 			</div>
 		</div>
 	</nav>
+	<aside id="info">
+		<div>
+			<div class="close">
+				<a id="close-button" href="#">
+					<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+					<svg width="14px" height="16px" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+					    <title>x</title>
+					    <desc>Created with Sketch.</desc>
+					    <defs></defs>
+					    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+					        <g id="Got-Movers-PPC---Menu---Mobile" transform="translate(-380.000000, -755.000000)" fill="#FFFFFF">
+					            <path d="M380,769.76 C380,770.33 380.45,770.81 381.05,770.81 C381.47,770.81 381.77,770.57 382.04,770.24 L386.72,764.3 L391.43,770.27 C391.7,770.6 392,770.81 392.45,770.81 C393.05,770.81 393.53,770.36 393.53,769.73 C393.53,769.43 393.41,769.16 393.2,768.89 L388.16,762.71 L392.99,756.8 C393.17,756.59 393.29,756.35 393.29,756.05 C393.29,755.45 392.84,755 392.24,755 C391.82,755 391.52,755.24 391.25,755.57 L386.81,761.21 L382.34,755.54 C382.07,755.21 381.77,755 381.32,755 C380.72,755 380.24,755.42 380.24,756.08 C380.24,756.38 380.36,756.65 380.6,756.92 L385.37,762.77 L380.3,769.01 C380.09,769.22 380,769.46 380,769.76 L380,769.76 Z" id="x"></path>
+					        </g>
+					    </g>
+					</svg>
+				</a>
+			</div>
+			<div class="info info_main">
+				<button id="info-left">
+					<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+					<svg width="8px" height="16px" viewBox="0 0 8 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+					    <title>arrow-left</title>
+					    <desc>Created with Sketch.</desc>
+					    <defs></defs>
+					    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.300000012">
+					        <g id="Got-Movers-PPC---Menu---Mobile" transform="translate(-42.000000, -956.000000)" fill="#FFFFFF">
+					            <path d="M46.2062916,967.584389 L53.4940794,961.50927 C53.7960798,961.257936 53.8369687,960.80838 53.5847462,960.506602 C53.3320792,960.204157 52.8843008,960.163268 52.5820781,960.415046 L45.7500688,966.110387 L38.9185039,960.415046 C38.6156146,960.163712 38.167614,960.204601 37.9153914,960.506602 C37.6631688,960.808158 37.7040578,961.257936 38.0060582,961.50927 L45.2934015,967.584389 C45.4258461,967.695056 45.5880686,967.750167 45.7500688,967.750167 C45.9122912,967.750167 46.0742915,967.695056 46.2062916,967.584389 L46.2062916,967.584389" id="arrow-left" transform="translate(45.750069, 964.000099) rotate(-270.000000) translate(-45.750069, -964.000099) "></path>
+					        </g>
+					    </g>
+					</svg>
+				</button>
+				<button id="info-right"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+					<svg width="8px" height="16px" viewBox="0 0 8 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+					    <title>arrow-right</title>
+					    <desc>Created with Sketch.</desc>
+					    <defs></defs>
+					    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.300000012">
+					        <g id="Got-Movers-PPC---Menu---Mobile" transform="translate(-368.000000, -956.000000)" fill="#FFFFFF">
+					            <path d="M372.206292,967.584389 L379.494079,961.50927 C379.79608,961.257936 379.836969,960.80838 379.584746,960.506602 C379.332079,960.204157 378.884301,960.163268 378.582078,960.415046 L371.750069,966.110387 L364.918504,960.415046 C364.615615,960.163712 364.167614,960.204601 363.915391,960.506602 C363.663169,960.808158 363.704058,961.257936 364.006058,961.50927 L371.293401,967.584389 C371.425846,967.695056 371.588069,967.750167 371.750069,967.750167 C371.912291,967.750167 372.074291,967.695056 372.206292,967.584389 L372.206292,967.584389" id="arrow-right" transform="translate(371.750069, 964.000099) rotate(-90.000000) translate(-371.750069, -964.000099) "></path>
+					        </g>
+					    </g>
+					</svg>
+				</button>
+				<div class="info_main_step">
+					<h5>ENTER INFO</h5>
+					<p>Take a few moments and tell us about your move.</p>
+				</div>
+				<div class="info_main_step">
+					<h5>FIND MOVERS</h5>
+					<p>We'll find you movers from a network of licensed carriers.</p>
+				</div>
+				<div class="info_main_step">
+					<h5>VIEW QUOTES</h5>
+					<p>Review quotes, compare movers and save big.</p>
+				</div>
+			</div>
+			<div class="info info_disclaimer">
+				<p>*Disclaimer: GotMovers.com is not a moving company or moving broker and will not be performing your move.  GotMovers is a matching service that will put you in touch with movers that can help you.  Some movers may be self-service, some may be full-service, and in some cases we might put you in touch with other companies that match you with movers outside of our network.  In all cases, please make sure you research any movers that call you to verify their license, availability, and pricing.  Once you submit your information, you will be contacted by phone or email with quotes.</p>
+			</div>
+			<div class="info info_copyright">
+				<p>Copyright 2016 &copy; www.GotMovers.com</p>
+				<p>7945 W Sahara Ave, Ste 205, Las Vegas, NV 89117</p>
+			</div>
+		</div>
+	</aside>
 	<footer class="main-container">
 		<div>
 			<ul>
@@ -164,7 +234,7 @@
 				<li class="line"></li>
 				<li>Terms of Use</li>
 				<li class="line"></li>
-				<li><a href="#"><img src="img/menu-button.png"></a></li>
+				<li><a id="info-show" href="#"><img src="img/menu-button.png"></a></li>
 			</ul>
 		</div>
 		<div class="copyrights">

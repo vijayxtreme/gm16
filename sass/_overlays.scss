@@ -1,8 +1,134 @@
 nav.overlay {
-	display: none;
+	display:none;
 	background-color:rgba(18,71,112,0.95);
 	height:100%;
 	width:100%;
-	position:absolute;
+	position:fixed;
 	top:0;
+	padding-top:98px;
+	text-align:center;
+	font-family:Lato;
+	font-weight:300;
+	font-size:22px;
+	padding-left:36px;
+	padding-right:36px;
+	box-sizing:border-box;
+
+	.overlay_step {
+		display: none;
+	}
+	.overlay_step.move_size {
+		display: block;
+	}
+	
+	.menu_move_size {
+		padding-top:34px;
+	}
+
+	button {
+		background-color:#2697E9;
+		display: block;	
+		max-width:342.96px;
+		width:100%;
+		height:58.62px;
+		margin:0 auto;
+		border:0;
+		margin-bottom:6px;
+		border-radius:4px;
+		font-family: Lato, sans-serif;
+		font-weight: 800;
+		font-size:18px;
+		letter-spacing: 1.83px;
+		color:white;
+		text-transform: uppercase;
+		outline:none;
+	}
+	button:active {
+		background-color:#49B844;
+	}
+}
+
+aside#info {
+	display:none;
+	position:fixed;
+	top:0px;
+	width:100%;
+	min-height:733px;
+	height:100%;
+	background-color: #2183CA; 
+	z-index:10;
+	button {
+		position:absolute;
+		top:222px;
+	}
+	button#info-left {
+		left:42px;
+	}
+	button#info-right {
+		right:42px;
+	}
+
+
+	.close {
+		position:absolute;
+		right:20px;
+		top:20px;
+	}
+	.info {
+		padding-top:66px;
+		padding-right:40px;
+		padding-left:40px;
+		box-sizing:border-box;
+		text-align: center;
+	}
+	.info_main_step {
+		h5 {
+			font-size:16px;
+			letter-spacing: 1.6px;
+			line-height: 19px;
+			font-family: Montserrat, sans-serif;
+			padding-bottom:15px;
+		}
+		p {
+			font-size:18px;
+			line-height: 24px;
+			opacity:0.7;
+			font-family: Lato, sans-serif;
+			font-weight: 300;
+			max-width: 239px;
+			width:100%;
+			margin:0 auto;
+			padding-bottom:41px;
+		}
+	}
+	.info_disclaimer {
+		border-top:1px solid rgba(255,255,255,0.28);
+		padding-top:48px;
+		font-family: Lato, sans-serif;
+		opacity:0.5;
+		color:#AAC6D9;
+		font-size:10px;
+		line-height: 15px;
+	}
+	.info_copyright {
+		padding-top:35px;
+		font-size:14px;
+		font-weight: 300;
+		line-height: 21px;
+		font-family: Lato, sans-serif;
+
+	}
+}
+
+@media screen and (max-width:360px){
+	aside#info {
+		
+		button#info-left {
+			left:10px;
+		}
+		button#info-right {
+			right:10px;
+		}
+	}
+
 }
