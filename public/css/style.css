@@ -96,8 +96,8 @@ section {
   section .mobile-friendly {
     padding-top: 14px;
     padding-bottom: 16px;
-    font-weight: 200;
-    opacity: 0.8;
+    font-weight: 100;
+    opacity: 1;
     font-size: 14px; }
   section .marketing {
     overflow: auto; }
@@ -108,8 +108,8 @@ section {
       letter-spacing: 1.04px; }
     section .calculator p {
       padding-top: 5px;
-      opacity: 0.55;
-      font-weight: 300;
+      opacity: 0.95;
+      font-weight: 200;
       font-style: italic;
       font-size: 18px;
       line-height: 20px; }
