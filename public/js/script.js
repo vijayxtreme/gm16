@@ -1,0 +1,15 @@
+$("#go").click(function(e){
+	e.preventDefault();
+	$("#step1").hide();
+	$("#step2").show();
+});
+$("#calculate").click(function(e){
+	e.preventDefault();
+	$("#step2").hide();
+	$("#step4").show();
+})
+$("#get-my-quotes").click(function(e){
+	e.preventDefault();
+	$("#step4").hide();
+	$("#thank-you").show();
+})

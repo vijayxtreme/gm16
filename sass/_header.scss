@@ -1,0 +1,16 @@
+header {
+	height:80px;
+	.col:first-child {
+		padding-top:25px;
+		img {
+			height:26px;
+			width:148px;
+		}
+	}
+
+	.col:last-child {
+		padding-top: 17px;
+		float:right;
+	
+	}
+}

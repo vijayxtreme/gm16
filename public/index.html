@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GotMovers</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,200,200i,300,300i,400,400i,700,700i" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="main">
+	<header class="main-container">
+		<div class="col">
+			<a href="/"><img src="img/gotmovers_logo.png"></a>
+		</div>
+		<div class="col">
+			<img src="img/phone-button.png">
+		</div>
+	</header>
+	<div class="step-container">
+		<section id="step1">
+			<div class="mobile-friendly">
+				<p><img src="img/apple-icon.png"> iOS Friendly</p>
+			</div>
+			<div class="marketing">
+				<div class="col">
+					<img class="girl-cell" src="img/girl-cell.png">
+				</div>
+				<div class="col calculator">
+					<h1>Moving Cost Calculator</h1>
+					<p>Rates as low as $199 Local,</p>
+					<p>$499 Long Distance</p>
+				</div>
+			</div>
+			<div class="forms">
+				<h2>Where are you moving from?</h2>
+				<div>
+					<form>
+						<div>
+							<input type="text" name="from_zip" placeholder="From ZIP"><button class="ziphelp" type="button">ZIP Help</button>
+						</div>
+						<div>
+							<button class="cta" type="submit" id="go">GO</button>
+						</div>
+					</form>
+				</div>
+				<div class="extra">
+					<img src="img/verisign.png">
+				</div>
+			</div>
+		</section>
+		<section id="step2">
+			<div>
+				<ul>
+					<li>90401</li>
+					<li>Studio</li>
+					<li>Sept 30</li>
+				</ul>
+			</div>
+			<div class="forms">
+				<h2>Where are you moving?</h2>
+				<div>
+					<form>
+						<input type="text" name="to_zip"><button class="ziphelp" type="button">ZIP Help</button>
+						<button class="cta" type="submit" id="calculate">CALCULATE</button>
+					</form>
+				</div>
+			</div>
+		</section>
+		<section id="step3">
+			<div>
+				<h3>Searching for Movers...</h3>
+				<div>
+					Loading
+				</div>
+				<p>40%</p>
+			</div>
+		</section>
+		<section id="step4">
+			<div class="summary">
+				<ul>
+					<li>90401</li>
+					<li class="line-s"></li>
+					<li>Studio</li>
+					<li class="line-s"></li>
+					<li>Sept 30</li>
+					<li class="line-s"></li>
+					<li>97201</li>
+				</ul>
+			</div>
+			<div class="next-steps">
+				<h4>Step1: <img src="img/green_check.png"> Movers Found</h4>
+				<h4 class="clear">Next: <img src="img/clear_check.png"> View Prices</h4>
+			</div>
+			<div id="email" class="forms finalstep">
+				<h2>What is your Email Address?</h2>
+				<div>
+					<form>
+						<input type="text" name="to_zip" placeholder="Valid Email">
+						<button class="cta" type="submit">NEXT</button>
+					</form>
+				</div>			
+			</div>
+			<div id="name" class="forms finalstep">
+				<h2>What is your Name?</h2>
+				<div>
+					<form>
+						<input type="text" name="to_zip" placeholder="Full Name">
+						<button class="cta" type="submit">NEXT</button>
+					</form>
+				</div>			
+			</div>
+			<div id="phone" class="forms finalstep">
+				<h2>What is your Number?</h2>
+				<div>
+					<form>
+						<input type="text" name="to_zip" placeholder="Valid Phone Number">
+						<button class="cta" type="submit" id="get-my-quotes">GET MY QUOTES</button>
+					</form>
+				</div>	
+				<div class="extra">
+					<img src="img/verisign.png">
+				</div>		
+			</div>
+			<div id="disclaimer">
+				<p>By clicking on the "View Quote" button, I agree to the Terms of Use, Privacy Policy and Disclaimer.  My "click" provides express written consent to be contacted directly by companies to quote my move or offer other products or services via emails, text messages, or calls/prerecorded messages via automatic dialing systems even if I am on a DNC list.  Consent is not a condition of purchasing any product or service.</p>
+			</div>
+		</section>
+		<section id="thank-you">
+			<div>
+				<h2>Thank You!</h2>
+				<p>Professional movers will call you shortly.</p>
+				<p>In the meantime, please see below for your approximate estimate:</p>
+			</div>
+			<div>
+				<h5>$1,000 - $2,000</h5>
+			</div>
+			<div>
+				<p>Get Moving with iMover <a href="#">CLICK HERE</a></p>
+			</div>
+		</section>
+	</div>
+	<nav class="overlay">
+		<div>
+			<h3>What size is your move?</h3>
+			<div>
+				<button>Studio</button>
+				<button>1 Bedroom</button>
+				<button>2 Bedroom</button>
+				<button>3 Bedroom</button>
+				<button>4+ Bedroom</button>
+				<button>Office/Commercial</button>
+			</div>
+		</div>
+		<div>
+			<h3>When are you moving?</h3>
+			<div>
+				Datepicker
+			</div>
+		</div>
+	</nav>
+	<footer class="main-container">
+		<div>
+			<ul>
+				<li>Privacy Policy</li>
+				<li class="line"></li>
+				<li>Terms of Use</li>
+				<li class="line"></li>
+				<li><a href="#"><img src="img/menu-button.png"></a></li>
+			</ul>
+		</div>
+		<div class="copyrights">
+			<p>Copyright 2016 &copy; www.GotMovers.com</p>
+			<p>7945 W Sahara Ave, Ste 205, Las Vegas, NV 89117</p>
+		</div>
+	</footer>
+	<script type="text/javascript" src="js/dist/all.min.js"></script>
+</body>
+</html>
