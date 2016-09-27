@@ -106,7 +106,8 @@ section {
     padding-left: 20px; }
     section .calculator h1 {
       font-size: 20px;
-      letter-spacing: 1.04px; }
+      letter-spacing: 1.04px;
+      font-weight: 500; }
     section .calculator p {
       padding-top: 5px;
       opacity: 0.70;
