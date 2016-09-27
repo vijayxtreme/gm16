@@ -1,7 +1,7 @@
 header {
-	height:80px;
+	height:60px;
 	.col:first-child {
-		padding-top:25px;
+		padding-top:18px;
 		img {
 			height:26px;
 			width:148px;
@@ -9,8 +9,11 @@ header {
 	}
 
 	.col:last-child {
-		padding-top: 17px;
+		padding-top: 11px;
 		float:right;
+		img {
+			width:80%;
+		}
 	
 	}
 }

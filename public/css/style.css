@@ -73,19 +73,20 @@ body {
   padding-right: 20px; }
 
 .col {
-  float: left;
-  overflow: auto; }
+  float: left; }
 
 header {
-  height: 80px; }
+  height: 60px; }
   header .col:first-child {
-    padding-top: 25px; }
+    padding-top: 18px; }
     header .col:first-child img {
       height: 26px;
       width: 148px; }
   header .col:last-child {
-    padding-top: 17px;
+    padding-top: 11px;
     float: right; }
+    header .col:last-child img {
+      width: 80%; }
 
 section {
   width: 100%;
@@ -100,7 +101,7 @@ section {
     opacity: 1;
     font-size: 14px; }
   section .marketing {
-    overflow: auto; }
+    overflow: hidden; }
   section .calculator {
     padding-left: 20px; }
     section .calculator h1 {
