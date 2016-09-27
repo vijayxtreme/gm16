@@ -66,12 +66,11 @@ body {
 
 .step-container {
   background: url(../img/biglady.png) no-repeat;
-  background-position: 100% 230px;
+  background-position: 100% 270px;
   background-color: #2183CA;
   padding-left: 20px;
   padding-right: 20px;
-  height: 289px;
-  width: 219px; }
+  background-size: 219px 289px; }
 
 .col {
   float: left; }
