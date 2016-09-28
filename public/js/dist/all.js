@@ -12733,10 +12733,7 @@ $(".ziphelp").click(function(e){
 	e.preventDefault();
 	$(".zips").show();
 });
-$("#zip-close-btn").click(function(e){
-	e.preventDefault();
-	$(".zips").hide();
-})
+
 
 $("#from_zip").mask('99999', {placeholder:""});
 $("#to_zip").mask('99999', {placeholder:""});
@@ -12917,6 +12914,7 @@ function searchBarAnimate(){
 					
 					}
 				});
+				$("#zip-close-btn").click(closeZiphelp);
 				
 				$("#back").on("click", function(){
 					changePage($cityPage, $statePage);
