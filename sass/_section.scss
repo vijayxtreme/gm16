@@ -166,11 +166,13 @@ section {
 		opacity: 1;
 	}
 	.next-steps {
-		text-align:center;
+		text-align:left;
 		font-size: 20px;
 		font-family: Lato, sans-serif;
 		line-height: 24px;
 		padding-top:108px;
+	    width: 226px;
+    	margin: 0 auto;
 	}
 	.next-steps {
 		h4.clear {
@@ -252,7 +254,7 @@ section#thank-you {
 	display:none;
 }
 
-section#step1 {
+section#step4 {
 	display:block;
 }
 
