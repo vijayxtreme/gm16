@@ -1,0 +1,221 @@
+$header: #2193df;
+$input:#454545;
+$body:#004579;
+$zip-alpha:#005086;
+$border1:#d6d5d5;
+$border2:#f0eeef;
+$borderTop:#cad5e0;
+$selectedLetter: #002843;
+$selectedState: #e6e6e6;
+.zips {
+	display:none;
+	position:absolute;
+	top:0;
+	//margin-top:-58px !important;
+	width:100%;
+	max-width:736px;
+//	font-family:$sourceSansPro;
+	.zip-box {
+		background-color:$zip-alpha;
+		.zip-header {
+			background-color:$header;
+			color:white;
+			padding-bottom:10px;
+			height:50px;
+			max-width:736px;
+			width:100%;
+			z-index: 3;
+			position:fixed; 
+			#back {
+				cursor:pointer;
+			}
+			#back.inactive {
+				display:none;
+			}
+			.zip-alpha-mini { 
+				display:none; 
+			}
+			[class^=arr-] {
+			    border: solid currentColor;
+			    border-width: 0 0.4em .4em 0;
+			    display: inline-block;
+			    padding: .35em;
+			    color: #FFFFFF;
+			    float: none;
+			    position:absolute;
+			    top: 18px;
+			    left: -12px;
+			    z-index: 100;
+			}
+			:first-child {
+				left:19px;
+			}
+			.select-state {
+				position:absolute;
+				top:18px;
+				width:100%;
+				text-align: center;
+				//@include ems(20);
+			}
+			.close-btn {
+				float: right;
+				position:relative;
+				left:-28px;
+				cursor:pointer;
+				[class^=arr-]{
+					float:left;
+					
+				}
+				.arr-left {
+				 	transform: rotate(-225deg);
+				 	left:3px;
+				}
+				.arr-right {
+					transform: rotate(-40deg);
+				}
+			}
+
+		}
+		.zip-holder {
+			position:relative;
+			padding-top:60px;
+			.zip-alpha {
+				border-top:4px solid $body;
+				background-color:$zip-alpha;
+				padding-top:15px;
+				width:48px;
+				padding-bottom:33px;
+				position:fixed;
+				z-index: 2;
+				height: 100%;
+				//@include ems(13);
+				//@include lnems(18.33);
+				div {
+					text-align: center;
+					padding-top: 3px;
+					padding-bottom:3px;
+				}
+				// div:hover {
+				// 	background-color:$selectedLetter;
+				// 	cursor:pointer;
+				// }
+				.selected {
+					background-color:$selectedLetter;
+				}
+			}
+			.zip-alpha.inactive {
+				display: none;
+			}
+			
+
+			.zh-state, .zh-city {
+				z-index: 1;
+				background-color:white;
+				height:100%;
+				margin-left: 48px;
+				width:calc(100% - 48px);
+				color: black;
+				.state, .city {
+					height:43px;
+					//@include ems(16);
+					//@include lnems(33);
+					padding-left:14px;
+					border-bottom:1px solid $border1;
+					border-top:1px solid $border2;
+					box-sizing: border-box;
+    				padding-top: 11px;
+				}
+				.state:active, .state:focus, .city:active, .city:focus {
+					background-color:$selectedState;
+				}
+
+				.selected {
+					background-color:$selectedState;
+				}
+				// .state:hover, .city:hover {
+				// 	background-color:$selectedState; 
+				// 	cursor:pointer;
+				// }
+				.state:first-child, .city:first-child {
+					margin-top: 0px;
+					border-top:2px solid $borderTop;
+					padding-top:8px;
+				}
+			}
+			.zh-city-holder {
+				height: 700px;
+				position:fixed;
+				width:calc(100% - 48px);
+				background-color:white;
+			}
+			.zh-city {
+				display:none; 
+			}
+			.zh-state.default, .zh-city.default{
+				margin-left:0px;
+				width:100%;
+			}
+		}
+	}
+
+}
+/* By default, tiny is display none, it's just there 
+to tell us if we are in landscape or portrait view 
+for jQuery */
+.tiny {
+	display:none;
+}
+@media screen and (max-height:480px){
+	.tiny {
+		display: block;
+	}
+	.zips {
+		.zip-box{
+			.zip-header {
+				.zip-alpha-mini {
+					display:block;
+					overflow-x: scroll;
+					overflow-y: hidden;
+				    margin-top: 57px;
+    				background-color:$zip-alpha;
+					ul {
+						height:36px;
+						width:768px;	
+						li {
+							padding-top:10px;
+							display: inline-block;
+							height:calc(100% - 10px);
+							width:25px;
+							text-align: center;
+							//@include ems(13);
+						}
+						.selected {
+						    background-color: #002843;
+						}
+					}
+					//position:absolute;
+				}
+				.zip-alpha-mini.inactive {
+					display: none;
+				}
+				.zh-city{
+					margin-left:0px !important;
+					width:100% !important;
+				}
+   
+			}
+			.zip-holder {
+				padding-top:60px;
+				.zip-alpha {
+					display: none;
+				}
+				.zh-city-holder {
+					width:100%;
+				}
+			}
+			.zip-holder.cities {
+				padding-top:84px;
+			}
+		}
+	}
+}

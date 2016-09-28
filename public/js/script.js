@@ -36,6 +36,15 @@ $("#calendar").datepicker({
 	}
 });
 
+$(".ziphelp").click(function(e){
+	e.preventDefault();
+	$(".zips").show();
+});
+$("#zip-close-btn").click(function(e){
+	e.preventDefault();
+	$(".zips").hide();
+})
+
 $("#from_zip").mask('99999', {placeholder:""});
 $("#to_zip").mask('99999', {placeholder:""});
 $("#phone_num").mask('(999) 999-9999', {placeholder:""});
@@ -61,7 +70,7 @@ function searchBarAnimate(){
 					$loadheading.text("Searching For Movers...")
 					clearInterval(timer);
 					timer = setTimeout(function(){
-						sp = 50; 
+						sp = 150; 
 						animateOrangeLoader(inc, sp);
 					}, 300);
 					

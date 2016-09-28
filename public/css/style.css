@@ -1490,6 +1490,152 @@ a.ui-button:active,
 .ui-datepicker .ui-datepicker-prev-hover {
   left: 2px; }
 
+.zips {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  max-width: 736px; }
+  .zips .zip-box {
+    background-color: #005086; }
+    .zips .zip-box .zip-header {
+      background-color: #2193df;
+      color: white;
+      padding-bottom: 10px;
+      height: 50px;
+      max-width: 736px;
+      width: 100%;
+      z-index: 3;
+      position: fixed; }
+      .zips .zip-box .zip-header #back {
+        cursor: pointer; }
+      .zips .zip-box .zip-header #back.inactive {
+        display: none; }
+      .zips .zip-box .zip-header .zip-alpha-mini {
+        display: none; }
+      .zips .zip-box .zip-header [class^=arr-] {
+        border: solid currentColor;
+        border-width: 0 0.4em .4em 0;
+        display: inline-block;
+        padding: .35em;
+        color: #FFFFFF;
+        float: none;
+        position: absolute;
+        top: 18px;
+        left: -12px;
+        z-index: 100; }
+      .zips .zip-box .zip-header :first-child {
+        left: 19px; }
+      .zips .zip-box .zip-header .select-state {
+        position: absolute;
+        top: 18px;
+        width: 100%;
+        text-align: center; }
+      .zips .zip-box .zip-header .close-btn {
+        float: right;
+        position: relative;
+        left: -28px;
+        cursor: pointer; }
+        .zips .zip-box .zip-header .close-btn [class^=arr-] {
+          float: left; }
+        .zips .zip-box .zip-header .close-btn .arr-left {
+          transform: rotate(-225deg);
+          left: 3px; }
+        .zips .zip-box .zip-header .close-btn .arr-right {
+          transform: rotate(-40deg); }
+    .zips .zip-box .zip-holder {
+      position: relative;
+      padding-top: 60px; }
+      .zips .zip-box .zip-holder .zip-alpha {
+        border-top: 4px solid #004579;
+        background-color: #005086;
+        padding-top: 15px;
+        width: 48px;
+        padding-bottom: 33px;
+        position: fixed;
+        z-index: 2;
+        height: 100%; }
+        .zips .zip-box .zip-holder .zip-alpha div {
+          text-align: center;
+          padding-top: 3px;
+          padding-bottom: 3px; }
+        .zips .zip-box .zip-holder .zip-alpha .selected {
+          background-color: #002843; }
+      .zips .zip-box .zip-holder .zip-alpha.inactive {
+        display: none; }
+      .zips .zip-box .zip-holder .zh-state, .zips .zip-box .zip-holder .zh-city {
+        z-index: 1;
+        background-color: white;
+        height: 100%;
+        margin-left: 48px;
+        width: calc(100% - 48px);
+        color: black; }
+        .zips .zip-box .zip-holder .zh-state .state, .zips .zip-box .zip-holder .zh-state .city, .zips .zip-box .zip-holder .zh-city .state, .zips .zip-box .zip-holder .zh-city .city {
+          height: 43px;
+          padding-left: 14px;
+          border-bottom: 1px solid #d6d5d5;
+          border-top: 1px solid #f0eeef;
+          box-sizing: border-box;
+          padding-top: 11px; }
+        .zips .zip-box .zip-holder .zh-state .state:active, .zips .zip-box .zip-holder .zh-state .state:focus, .zips .zip-box .zip-holder .zh-state .city:active, .zips .zip-box .zip-holder .zh-state .city:focus, .zips .zip-box .zip-holder .zh-city .state:active, .zips .zip-box .zip-holder .zh-city .state:focus, .zips .zip-box .zip-holder .zh-city .city:active, .zips .zip-box .zip-holder .zh-city .city:focus {
+          background-color: #e6e6e6; }
+        .zips .zip-box .zip-holder .zh-state .selected, .zips .zip-box .zip-holder .zh-city .selected {
+          background-color: #e6e6e6; }
+        .zips .zip-box .zip-holder .zh-state .state:first-child, .zips .zip-box .zip-holder .zh-state .city:first-child, .zips .zip-box .zip-holder .zh-city .state:first-child, .zips .zip-box .zip-holder .zh-city .city:first-child {
+          margin-top: 0px;
+          border-top: 2px solid #cad5e0;
+          padding-top: 8px; }
+      .zips .zip-box .zip-holder .zh-city-holder {
+        height: 700px;
+        position: fixed;
+        width: calc(100% - 48px);
+        background-color: white; }
+      .zips .zip-box .zip-holder .zh-city {
+        display: none; }
+      .zips .zip-box .zip-holder .zh-state.default, .zips .zip-box .zip-holder .zh-city.default {
+        margin-left: 0px;
+        width: 100%; }
+
+/* By default, tiny is display none, it's just there 
+to tell us if we are in landscape or portrait view 
+for jQuery */
+.tiny {
+  display: none; }
+
+@media screen and (max-height: 480px) {
+  .tiny {
+    display: block; }
+  .zips .zip-box .zip-header .zip-alpha-mini {
+    display: block;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-top: 57px;
+    background-color: #005086; }
+    .zips .zip-box .zip-header .zip-alpha-mini ul {
+      height: 36px;
+      width: 768px; }
+      .zips .zip-box .zip-header .zip-alpha-mini ul li {
+        padding-top: 10px;
+        display: inline-block;
+        height: calc(100% - 10px);
+        width: 25px;
+        text-align: center; }
+      .zips .zip-box .zip-header .zip-alpha-mini ul .selected {
+        background-color: #002843; }
+  .zips .zip-box .zip-header .zip-alpha-mini.inactive {
+    display: none; }
+  .zips .zip-box .zip-header .zh-city {
+    margin-left: 0px !important;
+    width: 100% !important; }
+  .zips .zip-box .zip-holder {
+    padding-top: 60px; }
+    .zips .zip-box .zip-holder .zip-alpha {
+      display: none; }
+    .zips .zip-box .zip-holder .zh-city-holder {
+      width: 100%; }
+  .zips .zip-box .zip-holder.cities {
+    padding-top: 84px; } }
+
 nav.overlay {
   display: none;
   background-color: rgba(18, 71, 112, 0.95);
