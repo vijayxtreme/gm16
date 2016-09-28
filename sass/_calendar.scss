@@ -704,6 +704,7 @@ a.ui-button:active,
 	padding-top:33px;
 }
 .ui-datepicker {
+	padding:0;
 	width:100%;
 	max-width:348px;
 	margin:0 auto;
@@ -713,7 +714,9 @@ a.ui-button:active,
 }
 .ui-widget-header {
 	font-family: Lato, sans-serif;
+	text-transform:uppercase;
 	font-size:18px;
+	letter-spacing:2px;
 	color:#0A4572;
 	border:none;
 	background:white;
@@ -732,7 +735,45 @@ a.ui-button:active,
 	font-size:14px;
     font-weight: 400;
 	color:#0A4572;
+	margin:0 auto;
+	width:100%;
+}
+.ui-datepicker th {
+	font-weight:500;
+	font-family:Lato, sans-serif;
+	letter-spacing:1.78px;
 }
 .ui-datepicker td span, .ui-datepicker td a {
 	text-align:center;
+}
+.ui-datepicker td {
+	height: 36px;
+	width:36px;
+    box-sizing: border-box;
+    border: 1px solid #D8D8D8;
+    vertical-align: middle;
+}
+.ui-datepicker tr:last-child td{
+	border:0px;
+	border-top:1px solid #D8D8D8;
+	border-right:1px solid #D8D8D8;
+	border-left:1px solid #D8D8D8;
+	border-bottom:0px !important;
+
+}
+.ui-datepicker td:first-child{
+	border:0px !important;
+	border-top:1px solid #D8D8D8 !important;
+	border-right:1px solid #D8D8D8 !important;
+	border-bottom:1px solid #D8D8D8;
+	border-left:0px !important;
+
+}
+.ui-datepicker td:last-child{
+	border:0px !important;
+	border-top:1px solid #D8D8D8 !important;
+	border-bottom:1px solid #D8D8D8 !important;
+	border-left:1px solid #D8D8D8;
+	border-right:0px !important;
+
 }
