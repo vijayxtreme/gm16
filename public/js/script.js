@@ -3,13 +3,12 @@ $("#go").click(function(e){
 	//$("#step1").hide();
 	$("nav.overlay").show();
 });
-$("nav button").click(function(e){
+$(".overlay_step.move_size button").click(function(e){
 	e.preventDefault();
-	setTimeout(function(){
-		$("nav.overlay, #step1").hide();
-		$("#step2").show();
-	},400);
+	$(".overlay_step.move_size").hide();
+	$(".overlay_step.datepicker").show();
 });
+
 $("#info-show").click(function(e){
 	e.preventDefault();
 	$("aside#info").show();
@@ -29,6 +28,17 @@ $("#get-my-quotes").click(function(e){
 	$("#step4").hide();
 	$("#thank-you").show();
 });
+
+$("#calendar").datepicker({
+	onSelect:function(){
+		$("nav.overlay, #step1").hide();
+		$("#step2").show();
+	}
+});
+
+$("#from_zip").mask('99999', {placeholder:""});
+$("#to_zip").mask('99999', {placeholder:""});
+$("#phone_num").mask('(999) 999-9999', {placeholder:""});
 
 function searchBarAnimate(){
 	var $bar = $(".bar");

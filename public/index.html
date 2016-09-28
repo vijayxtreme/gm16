@@ -35,7 +35,7 @@
 				<div>
 					<form>
 						<div>
-							<input type="text" name="from_zip" placeholder="From ZIP"><button class="ziphelp" type="button">ZIP Help</button>
+							<input type="text" id="from_zip"  name="from_zip" placeholder="From ZIP"><button class="ziphelp" type="button">ZIP Help</button>
 						</div>
 						<div>
 							<button class="cta" type="submit" id="go">GO</button>
@@ -61,7 +61,7 @@
 				<h2>Where are you moving?</h2>
 				<div>
 					<form>
-						<input type="text" name="to_zip" placeholder="To ZIP"><button class="ziphelp" type="button">ZIP Help</button>
+						<input type="text" id="to_zip" name="to_zip" placeholder="To ZIP"><button class="ziphelp" type="button">ZIP Help</button>
 						<button class="cta" type="submit" id="calculate">CALCULATE</button>
 					</form>
 				</div>
@@ -96,7 +96,7 @@
 				<h2>What is your Email Address?</h2>
 				<div>
 					<form>
-						<input type="text" name="to_zip" placeholder="Valid Email">
+						<input type="text" id="email" name="email" placeholder="Valid Email">
 						<button class="cta" type="submit">NEXT</button>
 					</form>
 				</div>			
@@ -105,7 +105,7 @@
 				<h2>What is your Name?</h2>
 				<div>
 					<form>
-						<input type="text" name="to_zip" placeholder="Full Name">
+						<input type="text" id="fullname" name="fullname" placeholder="Full Name">
 						<button class="cta" type="submit">NEXT</button>
 					</form>
 				</div>			
@@ -114,7 +114,7 @@
 				<h2>What is your Number?</h2>
 				<div>
 					<form>
-						<input type="text" name="to_zip" placeholder="Valid Phone Number">
+						<input type="text" id="phone_num" name="phone_num" placeholder="Valid Phone Number">
 						<button class="cta" type="submit" id="get-my-quotes">GET MY QUOTES</button>
 					</form>
 				</div>	
@@ -155,7 +155,7 @@
 		<div class="overlay_step datepicker">
 			<h3>When are you moving?</h3>
 			<div class="menu_datepicker">
-				Datepicker
+				<div id="calendar"></div>
 			</div>
 		</div>
 	</nav>
