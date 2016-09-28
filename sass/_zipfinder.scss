@@ -28,6 +28,7 @@ $selectedState: #e6e6e6;
 			position:fixed; 
 			#back {
 				cursor:pointer;
+				transform: rotate(130deg);
 			}
 			#back.inactive {
 				display:none;
@@ -68,7 +69,8 @@ $selectedState: #e6e6e6;
 				}
 				.arr-left {
 				 	transform: rotate(-225deg);
-				 	left:3px;
+				 	left: 4px;
+  					top: 18.35px;
 				}
 				.arr-right {
 					transform: rotate(-40deg);

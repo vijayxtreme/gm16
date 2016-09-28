@@ -35,14 +35,14 @@ gulp.task('clean', function () {
 
 gulp.task("scripts", ['clean'], function() {
 
-    var concatted = gulp.src(['./public/js/jquery.slim.min.js', './public/js/jquery.ui.min.js', './public/js/jquery.masked.min.js', './public/js/script.js'])
+    var concatted = gulp.src(['./public/js/jquery.js', './public/js/jquery.mCustomScrollbar.js', './public/js/jquery.ui.min.js', './public/js/jquery.masked.min.js', './public/js/script.js'])
                         .pipe(concat('all.js'));
 
     concatted.pipe(gulp.dest('./public/js/dist/'));
 
-    concatted.pipe(uglify())
-             .pipe(rename('all.min.js'))
-             .pipe(gulp.dest('./public/js/dist/'));
+    //concatted.pipe(uglify())
+      //       .pipe(rename('all.min.js'))
+        //     .pipe(gulp.dest('./public/js/dist/'));
 
 });
 

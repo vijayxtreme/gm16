@@ -102,3 +102,237 @@ function searchBarAnimate(){
 	}, sp);
   }
 }
+
+//zipfinder
+(function(){
+	$.fn.zipfinder = function(){
+		return this.each(function(){
+			//the zipfinder div
+			var $zipfinder = $(this),
+				$field = $zipfinder.prev(".zipcode"),
+				$statePage = $zipfinder.find(".zh-state"),
+				$cityPage = $zipfinder.find(".zh-city"),
+				//$loader = $zipfinder.find(".zh-loader"),
+				$stateHolderScroller = $(".zh-state-holder"),
+				$cityHolderScroller = $(".zh-city-holder"),
+				isClickable = true,
+				isScrolling = false,
+				isPageEnd,
+				shouldScrollOnPageLoad = false;
+			
+			initiate();
+			
+			function initiate(){
+				
+				$cityHolderScroller.mCustomScrollbar({
+					theme:"dark-thin",
+					callbacks:{
+						onScrollStart: function(){
+							isScrolling = true;
+						},
+						onScroll:function(){
+							isScrolling = false;
+						},
+						onTotalScroll:function(){
+							isPageEnd = true;
+							console.log("the end");
+						},
+					}
+				}); 
+			
+				$stateHolderScroller.mCustomScrollbar({
+					theme:"dark-thin",
+					callbacks:{
+						onScrollStart: function(){
+							isScrolling = true;
+						},
+						
+						onScroll:function(){
+							isScrolling = false;
+						},
+						onTotalScroll:function(){
+							isPageEnd = true;
+							console.log("the end");
+						},
+					}
+				});
+
+				$statePage.on("click", ".state", function(){
+			
+					if (isScrolling == false){
+						if (isClickable == true){
+							var $state = $(this); //state
+							var stateName = $state.data("state");
+							var stateFullName = $state.data("abbr");
+							getCity(stateName);
+							
+							$(".select-state").text(stateFullName);
+							isClickable = false;
+							$zipfinder.find(".zh-city-holder").mCustomScrollbar("update");
+							//$loader.show();
+							$(".state").removeClass("selected");
+							$state.addClass("selected");
+							
+						}
+						
+					} else {
+						$stateHolderScroller.mCustomScrollbar("stop");
+						$stateHolderScroller.mCustomScrollbar("update");
+						isScrolling = false;	
+					}					
+				});
+				
+				$cityPage.on("click", ".city", function(){
+					if (isScrolling == false){
+						if (isClickable == true){	
+							var $city = $(this);
+							console.log($city);
+
+							$city.addClass("selected");
+							var theTimer = setTimeout(function(){
+								$city.removeClass("selected");
+							}, 100);
+							
+							$("input.zipcode.active").val($(this).data("zipcode"));
+							setTimeout(function(){
+								closeZiphelp();
+							}, 10);
+							
+						}
+					
+					} else {
+						$cityHolderScroller.mCustomScrollbar("stop");
+						$cityHolderScroller.mCustomScrollbar("update");
+						isScrolling = false;
+					
+					}
+					
+				});
+				
+				$(".zip-alpha, .zip-alpha-mini").on("click", ".scrollToSelected", function(){
+					if (isClickable == true){
+						var $alpha = $(this);
+						var alphabet = $alpha.text();
+						$(".scrollToSelected").removeClass("selected");
+						$alpha.addClass("selected");
+						
+						
+						if ($(".city[data-alphabet='"+alphabet+"']").length >0) {
+							console.log(true);
+							$(".zh-city-holder").mCustomScrollbar("scrollTo", $(".city[data-alphabet='"+alphabet+"']"));
+						}
+					
+					}
+				});
+				
+				$("#back").on("click", function(){
+					changePage($cityPage, $statePage);
+					$("#back").addClass("inactive");
+					$(".zip-holder").removeClass("cities");		
+
+					if($(".tiny").is(":visible")){
+						$(".zip-alpha-mini").addClass("inactive");
+						$(".zh-state").show();
+					}else{
+						$(".zip-alpha").addClass("inactive");
+						$(".zh-state").addClass("default");
+					}
+
+					$(".zh-city").hide();
+					$(".zh-state").show();
+					$statePage.find(".state.clicked").removeClass("clicked");
+				});
+
+				// $("#zip-close-btn").click(function(){
+
+				// });
+			}
+				
+			function getCity(stateAbbr){
+					$("section.spinner").show();
+					//create a fake server -- replace this with staging code instead
+					$.get(
+						'http://localhost:1337',
+						function(data){
+							var info = data;
+							var $container = $zipfinder.find(".zh-city-holder .mCSB_container");
+							
+							$container.empty();
+							
+							$.each(info, function(index, value){
+							 	var temp = "<div class='city' data-zipcode='"+ value.zipcode+"' data-alphabet='"+value.first_letter_city+"' >"+ capitalize(value.city_name.toLowerCase() )+"</div>";
+							 	$container.append(temp);
+							 });
+
+						}
+						
+					).done(function(){
+						//$loader.hide();
+						$("section.spinner").hide();
+						changePage($statePage, $cityPage); //change page
+						$("#back").removeClass("inactive");
+
+						changeZipHolder();
+					});
+			}
+			function closeZiphelp(){
+				
+				shouldScrollOnPageLoad = true;
+				$("#back").addClass("inactive");
+				$(".zip-holder").removeClass("cities");		
+				if($(".tiny").is(":visible")){
+					$(".zip-alpha-mini").addClass("inactive");
+					$(".zh-state").show();
+				}else{
+					$(".zip-alpha").addClass("inactive");
+					$(".zh-state").addClass("default");
+				}
+				$(".zh-city").hide();
+				$(".zh-state").show();
+				$(".zips").hide();
+				isClickable = true;
+				
+			}
+			
+			function changePage($firstPage, $secPage){
+				$firstPage.fadeOut(150,function(){
+					resetAlphabet();
+				});
+				$secPage.fadeIn(150);
+				isClickable = true;
+				
+			}
+			
+			function resetAlphabet(){
+				$cityPage.find(".scrollToSelected").removeClass("selected").first().addClass("selected");
+			}
+		});
+	};
+})();
+
+$(".zips").zipfinder();
+window.addEventListener("resize", changeZipHolder, false);
+
+function changeZipHolder(){
+
+	$(".zh-city-holder").mCustomScrollbar("scrollTo", "top");
+	if($(".tiny").is(":visible")){
+		if($(".zh-city").is(":visible")){
+			$(".zip-alpha-mini").removeClass("inactive");
+			$(".zip-alpha").addClass("inactive");
+			$(".zh-city").addClass("default");
+			$(".zip-holder").addClass("cities");
+		}
+	}else if($(".tiny").not(":visible")){
+		if($(".zh-city").is(":visible")){
+			$(".zip-alpha-mini").addClass("inactive");
+			$(".zip-alpha").removeClass("inactive");
+			$(".zh-city").removeClass("default");
+			$(".zip-holder").removeClass("cities");
+		}
+	}
+}
+
+function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
